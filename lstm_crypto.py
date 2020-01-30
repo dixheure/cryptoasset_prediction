@@ -39,7 +39,7 @@ influxdbRetriveData = InfluxdbRetriveData()
 influxdbRetriveData.get_trades_data(exchange, symbol, look_back_timeperiod, size_dataset_train, size_dataset_test)
 
 
-# Importing the training set
+# Importing training set
 dataset_train = pd.read_csv('dataset_train.csv')
 training_set_x = dataset_train.iloc[:, :].values
 training_set_y = dataset_train.iloc[:, -1:].values
@@ -88,13 +88,13 @@ regressor.add(Dense(units = 1))
 # Compiling LSTM
 regressor.compile(optimizer = 'adam', loss = 'mean_squared_error')
 
-# Fitting LSTM to the training set
+# Fitting LSTM to training set
 regressor.fit(X_train, y_train, epochs = epochs, batch_size = batch_size)
 
 
 # Making the predictions and visualising the results
 
-# Getting the real price 
+# Getting real price 
 dataset_test = pd.read_csv('dataset_test.csv')
 real_stock_price = dataset_test['price'].values
 
@@ -114,7 +114,7 @@ X_test = np.reshape(X_test, (X_test.shape[0], X_test.shape[1], inputs.shape[1]))
 predicted_stock_price = regressor.predict(X_test)
 predicted_stock_price = sc_y.inverse_transform(predicted_stock_price)
 
-# Visualising the results
+# Visualising results
 plt.plot(real_stock_price, color = 'blue', label = 'Real CryptoAsset Price')
 plt.plot(predicted_stock_price, color = 'green', label = 'Predicted CryptoAsset Price')
 plt.title('CryptoAsset Price Prediction')
