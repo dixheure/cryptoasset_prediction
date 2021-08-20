@@ -1,7 +1,7 @@
 
 
 ########################################################################
-## Making CryptoAsset Prediction Using Recurrent Neural Network (RNN) ##
+## Making CryptoAsset Prediction Using Recurrent Neural Network (RNN) ## 
 ########################################################################
 
 # Importing libraries
