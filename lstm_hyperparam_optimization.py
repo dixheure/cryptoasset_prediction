@@ -1,5 +1,5 @@
 #################################
-## Tuning LSTM hyperparameters ##
+## Tuning LSTM hyperparameters ## 
 #################################
 
 import numpy as np
