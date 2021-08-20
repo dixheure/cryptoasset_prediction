@@ -153,4 +153,4 @@ loop = asyncio.get_event_loop()
 queue = asyncio.LifoQueue(loop=loop)
 tasks = [get_trades(queue), save_real_time_market_data(queue)]
 loop.run_until_complete(asyncio.gather(*tasks))
-
+ 
