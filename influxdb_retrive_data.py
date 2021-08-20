@@ -96,4 +96,4 @@ class InfluxdbRetriveData:
         else:            
             return dataset_train, dataset_test
     
-    
+     
